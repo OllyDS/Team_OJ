@@ -1,0 +1,7 @@
+<h1> <%= @user.full_name %> </h1>
+
+<ul>
+  <% @user.games.map do |game|  %>
+  <li> <%= link_to game.name, game_path(game) %> </li>
+  <% end %>
+</ul>
