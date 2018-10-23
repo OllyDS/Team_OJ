@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:notice] = "You signed up successfully"
       flash[:color]= "valid"
-      redirect_to @user
+      redirect_to login_path
     else
       flash.now.alert = "Oops, couldn't create account. Please make sure you are using a valid email and password and try again."
       flash[:color]= "invalid"
