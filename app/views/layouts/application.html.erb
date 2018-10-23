@@ -7,7 +7,7 @@
         <title>Title Page</title>
 
         <!-- Bootstrap CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -19,90 +19,95 @@
     </head>
     <body>
 
-      <nav class="navbar navbar-default" role="navigation">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#"> <i class="fas fa-beer"></i> orangejuice</a>
-          </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><i class="fas fa-beer"></i> orangejuice</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse navbar-ex1-collapse">
-              <ul class="nav navbar-nav">
-                  <li><a href="/">Home</a></li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Games
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item"><strong>Online Games:</strong></a>
+                <a class="dropdown-item" href="/games/2">Starcraft</a>
+                <a class="dropdown-item" href="/games/1">League of Legends</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item"><strong>Offline Games:</strong></a>
+                <a class="dropdown-item" href="#">Cambio</a>
+             </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/tournaments">Tournaments</a>
+            </li>
+          </ul>
 
 
-                  <li class="dropdown">
-                    <a href="games" class="dropdown-toggle" data-toggle="dropdown">Games<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="/games/2">Starcraft</a></li>
-                      <li><a href="/games/1">League of Legends</a></li>
-                    </ul>
+            <ul class="nav navbar-nav mr-sm-2">
+              <li class="nav-item dropleft">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <% if current_user %>
+                   <% if current_user[:username] %>
+                     <%= current_user[:username] %>
+                   <% end %>
+                 <% else %>
+                   <%= "Login " %>
+                 <% end %>
+                <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                <% if current_user %>
+                  <li>
+                    <a class="dropdown-item" href="<%= "/users/#{current_user[:id]}" %>">Profile</a>
                   </li>
-
-                  
-                  <li><a href="/tournaments">Tournaments</a></li>
-              </ul>
-              <form class="navbar-form navbar-left" role="search">
-                  <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Search">
-                  </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-              </form>
-              <ul class="nav navbar-nav navbar-right">
-                  <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <% if current_user %>
-                          <% if current_user[:username] %>
-                            <%= current_user[:username] %>
-                          <% end %>
-                        <% else %>
-                          <%= "Login " %>
-                        <% end %>
-                        <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <% if current_user %>
-                          <li><%= link_to 'Profile', "/users/#{current_user[:id]}" %></li>
-                          <li><a href="#">Tournaments</a></li>
-
-                          <!--  Logout Button -->
-                          <li><%= form_tag('/logout') do -%>
-                            <div><%= submit_tag 'logout' %></div>
-                          <% end -%></li>
-                          <!--  Logout Button -->
-
-
-                        <% else %>
-                          <li><%= link_to 'Home', root_path %></li>
-                          <li><%= link_to 'Log In', login_path %></li>
-                          <li><%= link_to 'Sign Up', new_user_path %></li>
-                        <% end %>
-                      </ul>
+                  <li>
+                    <a class="dropdown-item" href="<%= "/users/#{current_user.games}" %>">Tournaments</a>
                   </li>
-              </ul>
-          </div><!-- /.navbar-collapse -->
+                  <li>
+                    <a class="dropdown-item" href=""><%= form_tag('/logout') do %>
+                      <%= submit_tag 'logout' %>
+                      <% end %>
+                    </a>
+                  </li>
+                <% else %>
+                  <li><a class="dropdown-item" href="<%= root_path %>">Home</a></li>
+                  <li><a class="dropdown-item" href="<%= root_path %>">About - Change Me</a></li>
+                  <li><a class="dropdown-item" href="<%= login_path %>">Log In</a></li>
+                  <li><a class="dropdown-item" href="<%= new_user_path %>">Sign Up</a></li>
+                <% end %>
+                </ul>
+              </li>
+            </ul>
+
+          <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+        </div>
       </nav>
 
       <%# ----- Flash Errors for BCRYPT ----- %>
     	<% if notice %>
-          	    <%= notice %>
+        <%= notice %>
     	<% end %>
 
     	<% if alert %>
-          	    <%= alert %>
+        <%= alert %>
     	<% end %>
-
 
       <%= yield %>
 
-        <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Bootstrap JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </body>
+      <!-- jQuery -->
+       <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+       <!-- Bootstrap JavaScript -->
+       <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   </body>
 </html>
