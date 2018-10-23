@@ -1,7 +1,7 @@
 john = User.create(
   first_name: "John",
   last_name: "Arnold",
-  user_name: "Arnbag",
+  username: "Arnbag",
   email: "john.arnold@flatironschool.com",
   img_url: ""
   )
@@ -9,7 +9,7 @@ john = User.create(
 oliver = User.create(
   first_name: "Oliver",
   last_name: "De Sousa",
-  user_name: "Olly DS",
+  username: "Olly DS",
   email: "oliver.desousa@flatironschool.com",
   img_url: "",
   )
