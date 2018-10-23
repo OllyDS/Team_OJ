@@ -1,0 +1,35 @@
+<h1> <%= @user.username %> </h1>
+<% if flash[:errors] %>
+  <ul>
+    <% flash[:errors].each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_for @user do |f| %>
+<p>Edit Username:
+  <%= f.text_field :username %>
+</p>
+<p>Edit First Name:
+  <%= f.text_field :first_name %>
+</p>
+<p>Edit Last Name:
+  <%= f.text_field :last_name %>
+</p>
+<p>Edit Email:
+  <%= f.text_field :email %>
+</p>
+<p>Edit Password:
+  <%= f.text_field :password %>
+</p>
+<p>Confirm New Password:
+  <%= f.text_field :password_confirmation %>
+</p>
+<p>Edit games you are currently interested in:
+<%= f.collection_check_boxes :game_ids, Game.all, :id, :name %>
+</p>
+<%= f.submit id: 'submit' %>
+<% end %>
+<br>
+
+<p> <%= link_to "Return to Profile", user_path %> </p>
