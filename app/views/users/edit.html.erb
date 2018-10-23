@@ -19,12 +19,6 @@
 <p>Edit Email:
   <%= f.text_field :email %>
 </p>
-<p>Edit Password:
-  <%= f.text_field :password %>
-</p>
-<p>Confirm New Password:
-  <%= f.text_field :password_confirmation %>
-</p>
 <p>Edit games you are currently interested in:
 <%= f.collection_check_boxes :game_ids, Game.all, :id, :name %>
 </p>

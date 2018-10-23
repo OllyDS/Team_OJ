@@ -31,8 +31,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update(class_params).valid?
-      redirect_to user_path(@user)
+    if @user.update(class_params)
+      redirect_to @user
     else
       flash[:errors].errors.full_messages
       redirect_to edit_user_path
