@@ -2,3 +2,8 @@
 <h2>You Really Shouldn't be Here</h2>
 <h3>Leave this Place</h3>
 <p><%= link_to "Leave", root_path %></p>
+
+
+<% @users.each do |u| %>
+<%= u.full_name %>
+<% end %>

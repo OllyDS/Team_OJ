@@ -3,8 +3,6 @@ john = User.create(
   last_name: "Arnold",
   username: "Arnbag",
   email: "john.arnold@flatironschool.com",
-  encrypted_password: "12345",
-  salt: "",
   img_url: ""
   )
 
@@ -13,8 +11,6 @@ oliver = User.create(
   last_name: "De Sousa",
   username: "Olly DS",
   email: "oliver.desousa@flatironschool.com",
-  encrypted_password: "abc123",
-  salt: "",
   img_url: "",
   )
 
@@ -23,8 +19,6 @@ ryan = User.create(
   last_name: "Barker",
   username: "R-bomber",
   email: "test@test.test",
-  encrypted_password: "qwerty",
-  salt: "",
   img_url: "",
   )
 
@@ -33,8 +27,6 @@ steve = User.create(
   last_name: "Courtier",
   username: "The Boss",
   email: "test@test.test",
-  encrypted_password: "qwerty123",
-  salt: "",
   img_url: "",
   )
 
