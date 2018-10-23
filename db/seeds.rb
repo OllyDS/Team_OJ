@@ -3,7 +3,7 @@ john = User.create(
   last_name: "Arnold",
   username: "Arnbag",
   email: "john.arnold@flatironschool.com",
-  img_url: ""
+  password: "john"
   )
 
 oliver = User.create(
@@ -11,7 +11,7 @@ oliver = User.create(
   last_name: "De Sousa",
   username: "Olly DS",
   email: "oliver.desousa@flatironschool.com",
-  img_url: "",
+  password: "olly"
   )
 
 ryan = User.create(
@@ -19,15 +19,15 @@ ryan = User.create(
   last_name: "Barker",
   username: "R-bomber",
   email: "test@test.test",
-  img_url: "",
+  password: "ryan"
   )
 
 steve = User.create(
   first_name: "Steve",
   last_name: "Courtier",
   username: "The Boss",
-  email: "test@test.test",
-  img_url: "",
+  email: "CGS@test.com",
+  password: "steve"
   )
 
 lol = Game.create(

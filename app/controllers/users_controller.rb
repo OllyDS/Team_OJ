@@ -13,13 +13,15 @@ class UsersController < ApplicationController
   end
 
   def create
-    if @user = User.new(class_params).valid?
-      @user.save
+    @user = User.new(class_params)
+    # stores all emails in lowercase to avoid duplicates and case-sensitive login errors:
+    @user.email.downcase!
+    if @user.save
       flash[:notice] = "You signed up successfully"
       flash[:color]= "valid"
-      redirect_to user_path(@user)
+      redirect_to @user
     else
-      flash[:notice] = "Form is invalid"
+      flash.now.alert = "Oops, couldn't create account. Please make sure you are using a valid email and password and try again."
       flash[:color]= "invalid"
       redirect_to new_user_path
     end
@@ -49,7 +51,7 @@ class UsersController < ApplicationController
   end
 
   def class_params
-    params.require(:user).permit(:username, :first_name, :last_name, :email, :img_url)
+    params.require(:user).permit(:username, :first_name, :last_name, :email, :password, :password_confirmation)
   end
 
 end

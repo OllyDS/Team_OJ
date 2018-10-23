@@ -5,5 +5,5 @@
 
 
 <% @users.each do |u| %>
-<%= u.full_name %>
+  <p><%= link_to u.username, user_path(u) %></p>
 <% end %>

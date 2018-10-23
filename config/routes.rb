@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   resources :games
   resources :users
 
-  root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  #This makes root our home page.
+	root to: 'pages#home'
+
+  # sign up page with form:
+  # get "/users/new", to: 'users#new', as: "/users/sign_up"
+  # post "/users", to: 'users#create'
+
 end
