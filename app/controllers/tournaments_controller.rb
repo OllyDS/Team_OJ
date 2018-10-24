@@ -1,5 +1,4 @@
 class TournamentsController < ApplicationController
-
   before_action :class_finder, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -41,7 +40,7 @@ class TournamentsController < ApplicationController
   end
 
   def class_params
-    params.require(:tournament).permit(:name, :date, :user_id, :game_id)
+    params.require(:tournament).permit(:name, :date, user_ids: [], game_ids: [])
   end
 
 end

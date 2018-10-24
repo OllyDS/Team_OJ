@@ -18,24 +18,42 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
 
+<<<<<<< HEAD
 
  #log-sign-forms {
    padding-top: 5em;
  }
 
  .footer-brand {
+=======
+ a.footer-brand {
+>>>>>>> master
    color: rgb(255,140,0);
+   max-height: 3em;
    padding-top: 0.5em;
-   padding-bottom: 2em;
+   padding-bottom: 0.5em;
  }
 
 .fa-heart {
   color: red;
 }
 
+<<<<<<< HEAD
 
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+=======
+img.show-page-logo {
+  width: 640px;
+  height: 240px;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+>>>>>>> master
