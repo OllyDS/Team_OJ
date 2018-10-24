@@ -31,9 +31,8 @@
   <% end %>
 </ul>
 <p>Tournaments Entered:</p>
-
-
-
-<br>
-<p><%= link_to "Edit your profile", edit_user_path %></p>
-<p> <%= link_to "Return to User List", users_path %> </p>
+<ul>
+  <% @user.tournaments.map do |tournament|  %>
+  <li> <%= link_to tournament.name, tournament_path(tournament) %> </li>
+  <% end %>
+</ul>

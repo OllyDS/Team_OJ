@@ -35,9 +35,6 @@ lol = Game.create(
   bio: "Class-based MOBA from Riot Games."
   )
 
-
-
-
 sc = Game.create(
   name: "Starcraft: Brood War",
   bio: "Classic, timeless RTS game from Blizzard."
@@ -45,5 +42,13 @@ sc = Game.create(
 
   ug1 = UserGame.create(user_id: 1, game_id: 1)
   ug2 = UserGame.create(user_id: 2, game_id: 2)
-  ug2 = UserGame.create(user_id: 3, game_id: 2)
-  ug2 = UserGame.create(user_id: 4, game_id: 1)
+  ug3 = UserGame.create(user_id: 3, game_id: 2)
+  ug4 = UserGame.create(user_id: 4, game_id: 1)
+  ug5 = UserGame.create(user_id: 1, game_id: 1)
+  ug6 = UserGame.create(user_id: 2, game_id: 2)
+  ug7 = UserGame.create(user_id: 3, game_id: 2)
+  ug8 = UserGame.create(user_id: 4, game_id: 1)
+  ug9 = UserGame.create(user_id: 1, game_id: 1)
+  ug10 = UserGame.create(user_id: 2, game_id: 2)
+  ug11 = UserGame.create(user_id: 3, game_id: 2)
+  ug12 = UserGame.create(user_id: 4, game_id: 1)
