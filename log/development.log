@@ -27681,3 +27681,1281 @@ Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.0ms)
 >>>>>>> 58a28c69d65fa0222bf550d90d432d59641f4a66
 
 
+Started GET "/" for 127.0.0.1 at 2018-10-24 17:43:38 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnadamarnold/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3637ms (Views: 3626.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 17:43:43 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 37ms (Views: 24.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2018-10-24 17:43:47 +0100
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tournaments_controller.rb:39
+  Rendering tournaments/show.html.erb within layouts/application
+  Rendered tournaments/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tournaments/5" for 127.0.0.1 at 2018-10-24 17:43:50 +0100
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tournaments_controller.rb:39
+  Rendering tournaments/show.html.erb within layouts/application
+  Rendered tournaments/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-24 17:43:57 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 17:44:03 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mTournament Load (1.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" ORDER BY "tournaments"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users/new" for 127.0.0.1 at 2018-10-24 18:09:25 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 69ms (Views: 36.3ms | ActiveRecord: 2.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/ie10-viewport-bug-workaround.js"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2018-10-24 18:09:27 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/ie10-viewport-bug-workaround.js"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-24 18:09:32 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/ie10-viewport-bug-workaround.js"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2018-10-24 18:09:35 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/ie10-viewport-bug-workaround.js"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2018-10-24 18:09:37 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/ie10-viewport-bug-workaround.js"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2018-10-24 18:11:33 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/ie10-viewport-bug-workaround.js"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/games/2" for 127.0.0.1 at 2018-10-24 18:11:44 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:47
+  Rendering games/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_games" ON "users"."id" = "user_games"."user_id" WHERE "user_games"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/views/games/show.html.erb:32
+  Rendered games/show.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 88ms (Views: 64.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-24 18:11:54 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_games" ON "games"."id" = "user_games"."game_id" WHERE "user_games"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments" INNER JOIN "user_tournaments" ON "tournaments"."id" = "user_tournaments"."tournament_id" WHERE "user_tournaments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  Rendered users/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 43ms (Views: 38.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-24 18:12:01 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/ie10-viewport-bug-workaround.js"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.1) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2018-10-24 18:12:07 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JXssINCPowWpNIlcEQumrFMt2ycapnzgVNhQH01yy8v8XgEsJ/fW45aOMW3hUtdutSsJgUS5+RLI8pgsqLtM0Q==", "login"=>{"email"=>"john@john.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "john@john.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:11
+Redirected to http://localhost:3000/
+Completed 302 Found in 68ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-24 18:12:07 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-24 18:12:16 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_games" ON "games"."id" = "user_games"."game_id" WHERE "user_games"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mTournament Load (0.1ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments" INNER JOIN "user_tournaments" ON "tournaments"."id" = "user_tournaments"."tournament_id" WHERE "user_tournaments"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 26ms (Views: 21.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2018-10-24 18:12:24 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_games" ON "games"."id" = "user_games"."game_id" WHERE "user_games"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mTournament Load (0.1ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments" INNER JOIN "user_tournaments" ON "tournaments"."id" = "user_tournaments"."tournament_id" WHERE "user_tournaments"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:35
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-24 18:12:29 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/users/edit.html.erb:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_games" ON "games"."id" = "user_games"."game_id" WHERE "user_games"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/edit.html.erb:23
+  Rendered users/edit.html.erb within layouts/application (107.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 129ms (Views: 125.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-24 18:12:51 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/users/edit.html.erb:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_games" ON "games"."id" = "user_games"."game_id" WHERE "user_games"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/edit.html.erb:23
+  Rendered users/edit.html.erb within layouts/application (6.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2018-10-24 18:12:55 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/users/edit.html.erb:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_games" ON "games"."id" = "user_games"."game_id" WHERE "user_games"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/edit.html.erb:23
+  Rendered users/edit.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 35ms (Views: 31.4ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users/3" for 127.0.0.1 at 2018-10-24 18:13:16 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AEr1f24vVTX4Yxg/bZ1iSAv8AHVymCC9oycd6R6Uu+xBXPVKiHsG6zVxnVLfkbiTXp/f+UIPrpEiya4mBYTdAA==", "user"=>{"username"=>"R-bomber", "first_name"=>"Ryan", "last_name"=>"Barker", "email"=>"ryan@ryan.test", "game_ids"=>["", "1", "2"], "bio"=>"I'm a total d-bag"}, "commit"=>"Update User", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:34
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:34
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_games" ON "games"."id" = "user_games"."game_id" WHERE "user_games"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:34
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "ryan@ryan.test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "bio" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["bio", "I'm a total d-bag"], ["updated_at", "2018-10-24 17:13:16.138595"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:34
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:34
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 15ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-10-24 18:13:16 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_games" ON "games"."id" = "user_games"."game_id" WHERE "user_games"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mTournament Load (0.1ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments" INNER JOIN "user_tournaments" ON "tournaments"."id" = "user_tournaments"."tournament_id" WHERE "user_tournaments"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:35
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/games/1" for 127.0.0.1 at 2018-10-24 18:14:24 +0100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:47
+  Rendering games/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_games" ON "users"."id" = "user_games"."user_id" WHERE "user_games"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/views/games/show.html.erb:32
+  Rendered games/show.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:14:31 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:15:00 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:15:22 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:15:34 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:15:40 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:15:47 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:17:44 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:18:41 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 2484ms (Views: 2480.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:18:58 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 2419ms (Views: 2416.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:19:50 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 2426ms (Views: 2422.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:20:07 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 2440ms (Views: 2435.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:20:27 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 2331ms (Views: 2327.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:21:48 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 2476ms (Views: 2473.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:22:07 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 2514ms (Views: 2509.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:23:06 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:23:10 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-24 18:23:12 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:23:14 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:23:26 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:23:45 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 2404ms (Views: 2401.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:24:01 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 2397ms (Views: 2394.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:24:10 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 2469ms (Views: 2465.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:24:20 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:24:34 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:28:59 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:33:15 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:33:19 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:41:04 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  Rendered tournaments/index.html.erb within layouts/application (282.8ms)
+Completed 500 Internal Server Error in 294ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `tournament_dates' for #<#<Class:0x007fcab75b8798>:0x007fcab868aaa8>
+Did you mean?  tournament_path
+               tournaments_path):
+    10:   </p>
+    11: <% end %> -->
+    12: 
+    13: <% tournament_dates.each do |t| %>
+    14: <hr>
+    15:   <p>
+    16:     Date: <%= t.date %>
+  
+app/views/tournaments/index.html.erb:13:in `_app_views_tournaments_index_html_erb__1562821673238337509_70254318176280'
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:42:50 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:14
+  Rendered tournaments/index.html.erb within layouts/application (11.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 53ms (Views: 45.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:43:16 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:14
+  Rendered tournaments/index.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:43:37 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:14
+  Rendered tournaments/index.html.erb within layouts/application (14.8ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `tournament_dates' for #<Tournament:0x007fcab4b20b70>):
+    13: <% tournament_dates.each do |t| %>
+    14: <hr>
+    15:   <p>
+    16:     Date: <%= t.tournament_dates %>
+    17:     <% @tournaments.each do |t| %>
+    18:       <br>
+    19:       Tournament: <%= link_to t.name, tournament_path(t) %>
+  
+app/views/tournaments/index.html.erb:16:in `block in _app_views_tournaments_index_html_erb__1562821673238337509_70254355710640'
+app/views/tournaments/index.html.erb:13:in `each'
+app/views/tournaments/index.html.erb:13:in `_app_views_tournaments_index_html_erb__1562821673238337509_70254355710640'
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:45:10 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.1ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `tournament_dates' for "Friday 26th October":String):
+    13: <% tournament_dates.each do |t| %>
+    14: <hr>
+    15:   <p>
+    16:     Date: <%= t.tournament_dates %>
+    17:     <% @tournaments.each do |t| %>
+    18:       <br>
+    19:       Tournament: <%= link_to t.name, tournament_path(t) %>
+  
+app/views/tournaments/index.html.erb:16:in `block in _app_views_tournaments_index_html_erb__1562821673238337509_70254093194680'
+app/views/tournaments/index.html.erb:13:in `each'
+app/views/tournaments/index.html.erb:13:in `_app_views_tournaments_index_html_erb__1562821673238337509_70254093194680'
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:45:22 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 42ms (Views: 38.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tournaments/7" for 127.0.0.1 at 2018-10-24 18:46:06 +0100
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tournaments_controller.rb:39
+  Rendering tournaments/show.html.erb within layouts/application
+  Rendered tournaments/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments/7" for 127.0.0.1 at 2018-10-24 18:46:09 +0100
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tournaments_controller.rb:39
+  Rendering tournaments/show.html.erb within layouts/application
+  Rendered tournaments/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:48:03 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    17:     <% @tournaments.each do |tournament_name| %>
+    18:       <br>
+    19:       <% if tournament_name.date == tournament_date %>
+    20:         Tournament: <%= link_to t.name, tournament_path(t) %>
+    21:       <% end %>
+    22:     <% end %>
+    23: <% end %>
+  
+app/views/tournaments/index.html.erb:20:in `block (2 levels) in _app_views_tournaments_index_html_erb__1562821673238337509_70254333618140'
+app/views/tournaments/index.html.erb:17:in `block in _app_views_tournaments_index_html_erb__1562821673238337509_70254333618140'
+app/views/tournaments/index.html.erb:13:in `each'
+app/views/tournaments/index.html.erb:13:in `_app_views_tournaments_index_html_erb__1562821673238337509_70254333618140'
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:48:28 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:48:36 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:48:46 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:49:01 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:49:33 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:50:25 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:50:37 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:50:49 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:50:59 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:51:31 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:51:50 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:52:12 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:52:20 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments/1" for 127.0.0.1 at 2018-10-24 18:52:33 +0100
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.1ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tournaments_controller.rb:39
+  Rendering tournaments/show.html.erb within layouts/application
+  Rendered tournaments/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2018-10-24 18:52:46 +0100
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/views/tournaments/index.html.erb:4
+  [1m[36mCACHE Tournament Load (0.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  ↳ app/controllers/application_controller.rb:13
+  Rendered tournaments/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments/1" for 127.0.0.1 at 2018-10-24 18:52:58 +0100
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.1ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tournaments_controller.rb:39
+  Rendering tournaments/show.html.erb within layouts/application
+  Rendered tournaments/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tournaments/1" for 127.0.0.1 at 2018-10-24 18:54:23 +0100
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tournaments_controller.rb:39
+  Rendering tournaments/show.html.erb within layouts/application
+  Rendered tournaments/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 34ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tournaments/1" for 127.0.0.1 at 2018-10-24 18:54:27 +0100
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.1ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tournaments_controller.rb:39
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "user_tournaments" ON "users"."id" = "user_tournaments"."user_id" WHERE "user_tournaments"."tournament_id" = ?[0m  [["tournament_id", 1]]
+  ↳ app/views/tournaments/show.html.erb:9
+  Rendered tournaments/show.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 38ms (Views: 33.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tournaments/1" for 127.0.0.1 at 2018-10-24 18:54:44 +0100
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tournaments_controller.rb:39
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "user_tournaments" ON "users"."id" = "user_tournaments"."user_id" WHERE "user_tournaments"."tournament_id" = ?[0m  [["tournament_id", 1]]
+  ↳ app/views/tournaments/show.html.erb:9
+  Rendered tournaments/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tournaments/1" for 127.0.0.1 at 2018-10-24 18:54:51 +0100
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tournaments_controller.rb:39
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "user_tournaments" ON "users"."id" = "user_tournaments"."user_id" WHERE "user_tournaments"."tournament_id" = ?[0m  [["tournament_id", 1]]
+  ↳ app/views/tournaments/show.html.erb:9
+  Rendered tournaments/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 31ms (Views: 27.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tournaments/1" for 127.0.0.1 at 2018-10-24 18:55:03 +0100
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tournaments_controller.rb:39
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "user_tournaments" ON "users"."id" = "user_tournaments"."user_id" WHERE "user_tournaments"."tournament_id" = ?[0m  [["tournament_id", 1]]
+  ↳ app/views/tournaments/show.html.erb:9
+  Rendered tournaments/show.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 38ms (Views: 33.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tournaments/1" for 127.0.0.1 at 2018-10-24 18:55:14 +0100
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.2ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tournaments_controller.rb:39
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "user_tournaments" ON "users"."id" = "user_tournaments"."user_id" WHERE "user_tournaments"."tournament_id" = ?[0m  [["tournament_id", 1]]
+  ↳ app/views/tournaments/show.html.erb:6
+  Rendered tournaments/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-24 18:55:37 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
