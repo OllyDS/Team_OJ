@@ -14,9 +14,16 @@
  *= require_self
  */
 
-<<<<<<< HEAD:app/assets/stylesheets/application.scss
+
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
-=======
-@import "bootstrap";
->>>>>>> master:app/assets/stylesheets/application.scss
+
+ .footer-brand {
+   color: rgb(255,140,0);
+   padding-top: 0.5em;
+   padding-bottom: 2em;
+ }
+
+.fa-heart {
+  color: red;
+}
