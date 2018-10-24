@@ -56,3 +56,15 @@ img.show-page-logo {
  a.dropdown-toggle {
     color: #4d4f52;
 }
+
+
+.carousel-item {
+  height: 80vh;
+  min-height: 300px;
+  width: 100%;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
