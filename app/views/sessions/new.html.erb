@@ -1,14 +1,21 @@
-<h1>Log In</h1>
+ <div id="log-sign-forms">
+
+
+ <h2 class="form-signin-heading d-flex justify-content-center">Log In</h2>
 <%= form_for :login do |f| %>
   <div>
-    <%= f.label :email %>
-    <%= f.text_field :email, autofocus: true %>
+    <%= f.text_field :email, autofocus: true, :class => "form-control", :placeholder => "Email Address" %>
   </div>
   <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, :class => "form-control", :placeholder => "Password" %>
   </div>
   <div>
-    <%= f.submit "Log In" %>
+    <%= f.submit "Log In", :class => "btn btn-lg btn-primary btn-block" %>
   </div>
 <% end %>
+
+
+
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+ </div>

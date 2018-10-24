@@ -18,6 +18,11 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
 
+
+ #log-sign-forms {
+   padding-top: 5em;
+ }
+
  .footer-brand {
    color: rgb(255,140,0);
    padding-top: 0.5em;
@@ -26,4 +31,11 @@
 
 .fa-heart {
   color: red;
+}
+
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

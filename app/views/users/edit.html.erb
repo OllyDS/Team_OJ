@@ -22,7 +22,11 @@
 <p>Edit games you are currently interested in:
 <%= f.collection_check_boxes :game_ids, Game.all, :id, :name %>
 </p>
-<%= f.submit id: 'submit' %>
+<p>Add A Bio
+  <%= f.text_field :bio %>
+  </p>
+  <br>
+<%= f.submit %>
 <% end %>
 <br>
 
