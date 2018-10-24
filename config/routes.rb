@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   post '/logout', to: 'sessions#destroy', as: 'logout'
 
   resources :tournaments
-  resources :user_games
   resources :games
   resources :users
 

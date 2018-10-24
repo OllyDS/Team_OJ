@@ -6,6 +6,12 @@
 
 <%= form_for @user do |f| %>
   <div>
+    <%= f.text_field :first_name, autofocus: true, :class => "form-control", :placeholder => "First Name" %>
+  </div>
+  <div>
+    <%= f.text_field :last_name, autofocus: true, :class => "form-control", :placeholder => "Surname" %>
+  </div>
+  <div>
     <%= f.text_field :username, autofocus: true, :class => "form-control", :placeholder => "User Name" %>
   </div>
   <div>

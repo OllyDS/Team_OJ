@@ -23,7 +23,7 @@
 <%= f.collection_check_boxes :game_ids, Game.all, :id, :name %>
 </p>
 <p>Add A Bio
-  <%= f.text_field :bio %>
+  <%= f.text_area :bio %>
   </p>
   <br>
 <%= f.submit %>

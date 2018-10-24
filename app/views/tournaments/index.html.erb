@@ -1,1 +1,15 @@
 <h1>Tournaments</h1>
+<h5>There are several tournaments available to register for:</h5>
+
+<% @tournaments.each do |t| %>
+  <hr>
+  <p>
+    Tournament: <%= link_to t.name, tournament_path(t) %>
+    <br>
+    Date: <%= t.date %>
+  </p>
+<% end %>
+
+<!--
+<img src="http://i65.tinypic.com/6ym5qw.jpg" border="0" alt="LoL">
+<img src="http://i64.tinypic.com/20p1zkg.jpg" border="0" alt="SC"> -->
