@@ -1,15 +1,31 @@
-<h1> <%= @user.username %> </h1>
+
+
+
+
+
+
+
+<h1 class="text-center display-4"> <%= @user.username %> </h1>
 <br>
+
 <p>Name: <%= @user.full_name %></p>
-<p>Email: <%= current_user[:email] %></p>
+<p>Email: <%= @user.email %></p>
 <p>Password: ******** </p>
 <br>
-<p>Games you are currently interested in:</p>
+
+
+
+
+<p>Games Interested In:</p>
 <ul>
   <% @user.games.map do |game|  %>
   <li> <%= link_to game.name, game_path(game) %> </li>
   <% end %>
 </ul>
+<p>Tournaments Entered:</p>
+
+
+
 <br>
 <p><%= link_to "Edit your profile", edit_user_path %></p>
 <p> <%= link_to "Return to User List", users_path %> </p>
