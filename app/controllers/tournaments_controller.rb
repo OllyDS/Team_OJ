@@ -1,5 +1,4 @@
 class TournamentsController < ApplicationController
-
   before_action :class_finder, only: [:show, :edit, :update, :destroy]
 
   def index

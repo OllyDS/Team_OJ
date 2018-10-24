@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   has_many :user_games
-  has_many :tournaments
+  has_many :user_tournaments
   has_many :games, through: :user_games
+  has_many :tournaments, through: :user_tournaments
 
   has_secure_password
 	validates :email, presence: true, uniqueness: true
