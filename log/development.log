@@ -22527,3 +22527,59 @@ Completed 200 OK in 28ms (Views: 24.3ms | ActiveRecord: 0.2ms)
 
 
 >>>>>>> master
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUserTournaments (20181024114125)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20181024114125_create_user_tournaments.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "user_tournaments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "tournament_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181024114125_create_user_tournaments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181024114125"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to RemoveUserIdAndGameIdFromTrounaments (20181024115236)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atournaments" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "date" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "game_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181024115236_remove_user_id_and_game_id_from_trounaments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atournaments" ("id","name","date","user_id","game_id","created_at","updated_at")
+                     SELECT "id","name","date","user_id","game_id","created_at","updated_at" FROM "tournaments"[0m
+  ↳ db/migrate/20181024115236_remove_user_id_and_game_id_from_trounaments.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "tournaments"[0m
+  ↳ db/migrate/20181024115236_remove_user_id_and_game_id_from_trounaments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "date" varchar DEFAULT NULL, "game_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181024115236_remove_user_id_and_game_id_from_trounaments.rb:3
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "tournaments" ("id","name","date","game_id","created_at","updated_at")
+                     SELECT "id","name","date","game_id","created_at","updated_at" FROM "atournaments"[0m
+  ↳ db/migrate/20181024115236_remove_user_id_and_game_id_from_trounaments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atournaments"[0m
+  ↳ db/migrate/20181024115236_remove_user_id_and_game_id_from_trounaments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atournaments" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "date" varchar DEFAULT NULL, "game_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181024115236_remove_user_id_and_game_id_from_trounaments.rb:4
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "atournaments" ("id","name","date","game_id","created_at","updated_at")
+                     SELECT "id","name","date","game_id","created_at","updated_at" FROM "tournaments"[0m
+  ↳ db/migrate/20181024115236_remove_user_id_and_game_id_from_trounaments.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "tournaments"[0m
+  ↳ db/migrate/20181024115236_remove_user_id_and_game_id_from_trounaments.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "date" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181024115236_remove_user_id_and_game_id_from_trounaments.rb:4
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "tournaments" ("id","name","date","created_at","updated_at")
+                     SELECT "id","name","date","created_at","updated_at" FROM "atournaments"[0m
+  ↳ db/migrate/20181024115236_remove_user_id_and_game_id_from_trounaments.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atournaments"[0m
+  ↳ db/migrate/20181024115236_remove_user_id_and_game_id_from_trounaments.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181024115236"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
