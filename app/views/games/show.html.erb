@@ -1,7 +1,31 @@
-<h1> <%= @game.name %> </h1>
-
-
-<%= @game.bio %>
+<% if @game.id == 1 %>
+  <br>
+  <img class="show-page-logo center-block" src="http://i67.tinypic.com/2w4bvbt.png" alt="LoL logo">
+  <br>
+  <p>
+    League of Legends is a class-based multiplayer online battle arena (MOBA) game, developed by Riot Games.</p>
+  <p>
+    Players compete in matches, lasting anywhere from 20 to 60 minutes on average, and attempt to complete objectives (detroying turrets) with an end goal of detroying the enemy team's core (called the Nexus).</p>
+  <p>
+    In all game modes, players control characters called champions, chosen or assigned every match, who each have a set of unique abilities. Champions begin every match at a low level, and then gain experience over the course of the match to achieve a maximum level of 18.</p>
+  <p>
+    Gaining champion levels in matches allows players to unlock their champion's special abilities and augment them in a number of ways unique to each character. If a champion loses all their health, they are defeated, but are automatically revived in their base after enough time passes.</p>
+  <p>
+    Players also begin each match with a low amount of gold, and can earn additional gold throughout the match in a variety of ways: by killing non-player characters known as minions and monsters; by killing or helping to kill enemy players; by destroying enemy structures; passively over time; and through unique item interactions or champion abilities. This gold can then be spent throughout the match to buy in-game items that further augment each champion's abilities and game play in a variety of ways. Champion experience, gold earned, and items bought are specific to each match and do not carry over to subsequent matches. Thus, all players begin each match on more-or-less equal footing relative to their opposing team.
+  </p>
+<% elsif @game.id == 2 %>
+<br>
+<img class="show-page-logo center-block" src="http://i64.tinypic.com/25rl2yc.png" alt="SC logo">
+<p>
+  Starcraft is a highly-regarded real time strategy game (RTS) released by Blizzard in 1998.</p>
+<p>
+  The original game and its expansion have been praised as one of the benchmark real-time strategy games of its time. The series has gathered a solid following around the world, particularly in South Korea, where professional players and teams participate in matches, earn sponsorships, and compete in televised matches.</p>
+<p>
+  By June 2007, StarCraft and Brood War had sold nearly 10 million copies combined. In addition, the series was awarded a star on the Walk of Game in 2006, and holds four Guinness World Records in the Guinness World Records Gamer's Edition of 2008.</p>
+<p>
+  On March 27, 2017, Blizzard announced StarCraft: Remastered, a remastered version of the original StarCraft, with the core updates being up-to-date graphics, and revised dialogue and audio. <strong><em>As of April 19, 2017, StarCraft and its Brood War expansion are free to download and play from Blizzard's <a href="https://us.shop.battle.net/en-us/product/starcraft" >website</a>.</strong></em>
+</p>
+<% end %>
 
 <p>Players Interested In <%= @game.name %>: </p>
 <ul>

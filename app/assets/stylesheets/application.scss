@@ -18,12 +18,24 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
 
- .footer-brand {
+ a.footer-brand {
    color: rgb(255,140,0);
+   max-height: 3em;
    padding-top: 0.5em;
-   padding-bottom: 2em;
+   padding-bottom: 0.5em;
  }
 
 .fa-heart {
   color: red;
 }
+
+img.show-page-logo {
+  width: 640px;
+  height: 240px;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
