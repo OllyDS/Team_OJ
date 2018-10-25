@@ -6,7 +6,8 @@ class UserTournamentsController < ApplicationController
 
   def create
     @user_tournament = UserTournament.create(class_params)
-    redirect_to tournaments_path
+    redirect_to tournament_path(@user_tournament.tournament)
+    # render action: "tournaments/show.html.erb"
   end
 
   def destroy

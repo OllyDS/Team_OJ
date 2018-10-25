@@ -12,20 +12,19 @@
   <% end %>
 </ul>
 
-<% current_user.tournaments.find do |tournament| %>
-  <% if tournament.id == @tournament.id %>
-    <p>You have already signed up for the
-      <%= tournament.name %>
-      match on
-      <%= tournament.date %>
-    </p>
-  <% else %>
+<% if current_user.is_signed_up_to_tournament(@tournament) %>
+  <p>
+    You have already signed up for the
+    <%= @tournament.name %>
+    match on
+    <%= @tournament.date %>
+  </p>
+<% else %>
   <p>
     <%= form_for UserTournament.new do |f| %>
       <%= f.hidden_field :user_id, value: current_user.id %>
       <%= f.hidden_field :tournament_id, value: @tournament.id %>
       <%= f.submit 'Register' %>
-    <% end %>
   </p>
-  <% end %>
+    <% end %>
 <% end %>
