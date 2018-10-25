@@ -33,15 +33,19 @@ body {
 
  .footer-brand {
    color: rgb(255,140,0);
-   font-size: 1.5em;
+   font-size: 1.3em;
    max-height: 3em;
    padding-top: 0.5em;
    padding-bottom: 0.5em;
  }
 
+ .footer-squezeed {
+   color: white;
+ }
+
  .footer-bar {
    background: #d6d6d6;
-   padding: 1em;
+   padding: 0.3em 1.5em 0.1em 1.5em;
  }
 
 .fa-heart {
@@ -73,4 +77,15 @@ img.show-page-logo {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+
+// ============== Interview Section ===============
+
+.row.interview-section {
+  margin-top: 2em;
+}
+
+h2.display-4.interview-title {
+  font-size: 2em;
 }

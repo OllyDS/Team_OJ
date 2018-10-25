@@ -1,9 +1,33 @@
-<h1> <%= @tournament.name %> </h1>
+<h1 class = "text-center display-4"> <%= @tournament.name %> </h1>
 
 <p>Current Tournaments: <%= @tournament.name %> </p>
 <p>Date of Tournament: <%= @tournament.date %> </p>
 
 <p>There are currently <%= @tournament.users.count %> players signed up for this tournament. </p>
+<ul>
+  <% @tournament.users.each do |user| %>
+  <li>
+    <%= link_to user.username, user_path(user) %>
+  </li>
+  <% end %>
+</ul>
 
 
-<p>Sign up for this Tournament!!</p>
+
+<br>
+<br>
+
+<% if current_user %>
+
+  <% current_user.tournaments.each do |tournament| %>
+    <% if tournament.id == @tournament.id %>
+      <p>You have already signed up for the
+        <%= tournament.name %>
+        match on
+        <%= tournament.date %>
+      </p>
+    <% end %>
+  <% end %>
+
+  
+<% end %>
