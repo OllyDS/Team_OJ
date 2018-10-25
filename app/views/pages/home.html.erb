@@ -38,13 +38,15 @@
 
 
 <br>
-<blockquote class="blockquote text-right">
-  <p class="mb-0"><em>I will spin to win...always and forever.</em></p>
-  <footer class="blockquote-footer">Steve Courtier<cite title="Source Title"> League of Legends</cite></footer>
-</blockquote>
+
 
 
 <div class="container">
+
+  <blockquote class="blockquote text-right">
+    <p class="mb-0"><em>I will spin to win...always and forever.</em></p>
+    <footer class="blockquote-footer">Steve Courtier<cite title="Source Title"> League of Legends</cite></footer>
+  </blockquote>
 
       <h1 class="my-4">Coming Up</h1>
 
@@ -52,9 +54,15 @@
       <div class="row">
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
+            <h4 class="card-header"><%= @tournaments.first.date %></h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <p class="card-text">
+
+
+
+              games
+
+          </p>
             </div>
             <div class="card-footer">
               <a href="#" class="btn btn-primary">Learn More</a>
@@ -63,9 +71,14 @@
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
+            <h4 class="card-header"><%= tournament_dates.second %></h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+              <p class="card-text">
+
+
+                  games
+
+              </p>
             </div>
             <div class="card-footer">
               <a href="#" class="btn btn-primary">Learn More</a>
@@ -74,7 +87,7 @@
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
+            <h4 class="card-header"><%= tournament_dates.third %></h4>
             <div class="card-body">
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
             </div>
@@ -87,7 +100,7 @@
       <!-- /.row -->
 
       <!-- Portfolio Section -->
-      <h2>More shit...</h2>
+      <!-- <h2>More shit...</h2>
 
       <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
@@ -156,7 +169,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- /.row -->
 
       <!-- Interview Section -->
