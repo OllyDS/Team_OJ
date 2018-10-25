@@ -107,15 +107,19 @@
         <%= alert %>
     	<% end %>
 
+      <% if current_page?(:controller => 'pages', :action => 'home') %>
+        <%= yield %>
+      <% else %>
+        <div class="container"><br>
+          <%= yield %>
+        </div>
+      <% end %>
 
-<div class="container"><br>
-      <%= yield %>
-    </div>
 
 
       <footer class="footer fixed-bottom">
         <nav class="footer-bar text-right">
-          <p class = "footer-squezeed">hand-squezeed by:
+          <p class = "footer-squezeed">hand-squeezed by:
           <a class="footer-brand" href="#"> <i class="fas fa-beer"></i>  team orangejuice</a></p>
           <!-- <ul class="nav navbar-nav float-right">
             <li>test</li>

@@ -13,21 +13,19 @@
 </ul>
 
 
-
-<br>
-<br>
-
-<% if current_user %>
-
-  <% current_user.tournaments.each do |tournament| %>
-    <% if tournament.id == @tournament.id %>
-      <p>You have already signed up for the
-        <%= tournament.name %>
-        match on
-        <%= tournament.date %>
-      </p>
-    <% end %>
+<% current_user.tournaments.find do |tournament| %>
+  <% if tournament.id == @tournament.id %>
+    <p>You have already signed up for the
+      <%= tournament.name %>
+      match on
+      <%= tournament.date %>
+    </p>
+  <% else %>
+    <p><%= "Sign Up" %></p>
+    <p>
+      The button should run a method that creates a UserTournament instance using current_user.id && @tournament.id
+    </p>
+    use a form_for?\
+    hiden input fields,
   <% end %>
-
-  
 <% end %>
