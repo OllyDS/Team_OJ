@@ -25,8 +25,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+
+  # ====== move us soon =====
+
   def tournament_dates
     @tournaments = Tournament.all.map {|t| t.date }.uniq
   end
+
 
 end
