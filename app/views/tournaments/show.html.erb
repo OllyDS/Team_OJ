@@ -12,7 +12,6 @@
   <% end %>
 </ul>
 
-
 <% current_user.tournaments.find do |tournament| %>
   <% if tournament.id == @tournament.id %>
     <p>You have already signed up for the
@@ -21,11 +20,12 @@
       <%= tournament.date %>
     </p>
   <% else %>
-    <p><%= "Sign Up" %></p>
-    <p>
-      The button should run a method that creates a UserTournament instance using current_user.id && @tournament.id
-    </p>
-    use a form_for?\
-    hiden input fields,
+  <p>
+    <%= form_for UserTournament.new do |f| %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :tournament_id, value: @tournament.id %>
+      <%= f.submit 'Register' %>
+    <% end %>
+  </p>
   <% end %>
 <% end %>

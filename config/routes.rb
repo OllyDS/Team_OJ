@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   resources :tournaments
   resources :games
   resources :users
+  resources :user_tournaments, only: [:new, :create, :destroy]
 
 end

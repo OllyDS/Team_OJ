@@ -3,6 +3,7 @@ class TournamentsController < ApplicationController
 
   def index
     @tournaments = Tournament.all
+    @user_tournaments = UserTournament.all
   end
 
   def show
@@ -13,7 +14,7 @@ class TournamentsController < ApplicationController
   end
 
   def create
-    @tournament = Tournament.new(class_finder)
+    @tournament = Tournament.new(class_params)
   end
 
   def edit
