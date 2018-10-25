@@ -1,30 +1,38 @@
 <h1 class = "text-center display-4"> <%= @tournament.name %> </h1>
+<% if logged_in? %>
 
-<p>Current Tournaments: <%= @tournament.name %> </p>
-<p>Date of Tournament: <%= @tournament.date %> </p>
+  <p>Current Tournaments: <%= @tournament.name %> </p>
+  <p>Date of Tournament: <%= @tournament.date %> </p>
 
-<p>There are currently <%= @tournament.users.count %> players signed up for this tournament. </p>
-<ul>
-  <% @tournament.users.each do |user| %>
-  <li>
-    <%= link_to user.username, user_path(user) %>
-  </li>
-  <% end %>
-</ul>
-
-<% if current_user.is_signed_up_to_tournament(@tournament) %>
-  <p>
-    You have already signed up for the
-    <%= @tournament.name %>
-    match on
-    <%= @tournament.date %>
-  </p>
-<% else %>
-  <p>
-    <%= form_for UserTournament.new do |f| %>
-      <%= f.hidden_field :user_id, value: current_user.id %>
-      <%= f.hidden_field :tournament_id, value: @tournament.id %>
-      <%= f.submit 'Register' %>
-  </p>
+  <p>There are currently <%= @tournament.users.count %> players signed up for this tournament. </p>
+  <ul>
+    <% @tournament.users.each do |user| %>
+    <li>
+      <%= link_to user.username, user_path(user) %>
+    </li>
     <% end %>
+  </ul>
+
+  <% if current_user.is_signed_up_to_tournament(@tournament) %>
+    <p>
+      You have already signed up for the
+      <%= @tournament.name %>
+      match on
+      <%= @tournament.date %>
+    </p>
+  <% else %>
+    <p>
+      <%= form_for UserTournament.new do |f| %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.hidden_field :tournament_id, value: @tournament.id %>
+        <%= f.submit 'Register' %>
+    </p>
+      <% end %>
+  <% end %>
+
+<% else %>
+<p> You are not logged in. </p>
+  <p> <%= link_to "Log in?", login_path %> </p>
+  <p> or </p>
+  <p> <%= link_to "Sign up?", new_user_path %> </p>
 <% end %>

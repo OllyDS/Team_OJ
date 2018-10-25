@@ -1,29 +1,15 @@
 <h1 class="text-center display-4">Tournaments</h1>
-<h5 class="text-center">There are several tournaments available to register for:</h5>
-
-<!-- <% @tournaments.each do |t| %>
+  <h5 class="text-center">There are several tournaments available to register for:</h5>
+    <% tournament_dates.each do |tournament_date| %>
   <hr>
-  <p>
-    Tournament: <%= link_to t.name, tournament_path(t) %>
-    <br>
-    Date: <%= t.date %>
-  </p>
-<% end %> -->
-
-<% tournament_dates.each do |tournament_date| %>
-<hr>
-  <p><strong>Date:</strong> <%= tournament_date %></p>
-    What's On:
+    <p><strong>Date:</strong> <%= tournament_date %></p>
+      What's On:
     <% @tournaments.each do |tournament_name| %>
       <% if tournament_name.date == tournament_date %>
         <br><%= link_to tournament_name.name, tournament_path(tournament_name) %>
       <% end %>
     <% end %>
-<% end %>
-
-
-
-
+  <% end %>
 
 
 <!--
