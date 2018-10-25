@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :class_finder, only: [:show, :edit, :update, :destroy]
+  before_action :class_finder, only: [:show, :update, :destroy]
 
   def index
     @users = User.all
@@ -28,6 +28,8 @@ class UsersController < ApplicationController
   end
 
   def edit
+    authorized_for(params[:id])
+    @user = User.find(params[:id])
   end
 
   def update

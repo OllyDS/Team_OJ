@@ -51,6 +51,11 @@ sc = Game.create(
   bio: "Classic, timeless RTS game from Blizzard."
   )
 
+cam = Game.create(
+  name: "Cambio",
+  bio: "Card game for 2 + players."
+  )
+
 ug1 = UserGame.create(user_id: 1, game_id: 1)
 ug2 = UserGame.create(user_id: 1, game_id: 2)
 ug3 = UserGame.create(user_id: 2, game_id: 1)

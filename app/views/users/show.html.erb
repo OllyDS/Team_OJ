@@ -1,29 +1,8 @@
-
-
-
-
-
-
-
 <h1 class="text-center display-4"> <%= @user.username %> </h1>
 <br>
 
 <p>Name: <%= @user.full_name %></p>
 <p>Email: <%= @user.email %></p>
-<p>Password: ******** </p>
-<br>
-
-<div id="user-bio">
-  <h1>Bio:</h1>
-
-  <%= @user.bio %>
-</div>
-
-
-
-
-
-
 <p>Games Interested In:</p>
 <ul>
   <% @user.games.map do |game|  %>
@@ -36,3 +15,9 @@
   <li> <%= link_to tournament.name, tournament_path(tournament) %> </li>
   <% end %>
 </ul>
+<br>
+<div id="user-bio">
+  <h4>Bio:</h4>
+
+  <%= @user.bio %>
+</div>
