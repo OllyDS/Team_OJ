@@ -12,16 +12,13 @@
         <!-- Slide One - Set the background image for this slide in the line below -->
         <div class="carousel-item active" style="background-image: url('/images/games/lol-hero-1.jpg')">
           <div class="carousel-caption d-none d-md-block">
-            <button type="button" class="btn btn-primary btn-block">Full-Width Button</button>
+            <h3><img class="lol-image-overlay" src="/images/games/LoL-icon.png" border="0" alt=""></h3>
           </div>
         </div>
         <!-- Slide Two - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('http://i64.tinypic.com/2enlz69.jpg')">
+        <div class="carousel-item" style="background-image: url('/images/games/SC-hero.jpg')">
           <div class="carousel-caption d-none d-md-block">
-            <h3><a href="http://tinypic.com?ref=25rl2yc" target="_blank">
-              <img src="http://i64.tinypic.com/25rl2yc.jpg" border="0" alt=""></a></h3>
-            <h3>Second Slide</h3>
-            <p>This is a description for the second slide.</p>
+            <h3><img class="sc-image-overlay" src="/images/games/SC-logo-bottom.png" border="0" alt=""></h3>
           </div>
         </div>
       </div>
@@ -54,18 +51,19 @@
       <div class="row">
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header"><%= @tournaments.first.date %></h4>
+            <h4 class="card-header"><%= tournament_dates.first %></h4>
             <div class="card-body">
+              <ul>
               <p class="card-text">
-
-
-
-              games
-
-          </p>
+                <% tournament_array.each do |tournament| %>
+                  <% if tournament.date == tournament_dates.first %>
+                    <li><%= link_to tournament.name, tournament_path(tournament) %></li>
+                  <% end %>
+                <% end %>
+              </p>
+              </ul>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
@@ -73,15 +71,17 @@
           <div class="card h-100">
             <h4 class="card-header"><%= tournament_dates.second %></h4>
             <div class="card-body">
+              <ul>
               <p class="card-text">
-
-
-                  games
-
+                <% tournament_array.each do |tournament| %>
+                  <% if tournament.date == tournament_dates.second %>
+                    <li><%= link_to tournament.name, tournament_path(tournament) %></li>
+                  <% end %>
+                <% end %>
               </p>
+              </ul>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
@@ -89,10 +89,17 @@
           <div class="card h-100">
             <h4 class="card-header"><%= tournament_dates.third %></h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <ul>
+              <p class="card-text">
+                <% tournament_array.each do |tournament| %>
+                  <% if tournament.date == tournament_dates.third %>
+                    <li><%= link_to tournament.name, tournament_path(tournament) %></li>
+                  <% end %>
+                <% end %>
+              </p>
+              </ul>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>

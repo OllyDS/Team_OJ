@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   # Make the current_user method available to views also, not just controllers:
-  helper_method :current_user, :tournament_dates, :logged_in?
+  helper_method :current_user, :tournament_dates, :tournament_array, :logged_in?
   # Define the current_user method:
   def current_user
     # Look up the current user based on user_id in the session cookie:
@@ -32,5 +32,8 @@ class ApplicationController < ActionController::Base
     @tournaments = Tournament.all.map {|t| t.date }.uniq
   end
 
+  def tournament_array
+    @tournaments = Tournament.all
+  end
 
 end
