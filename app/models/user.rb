@@ -13,4 +13,8 @@ class User < ApplicationRecord
     self.first_name + " " + self.last_name
   end
 
+  def is_signed_up_to_tournament(tournament)
+    self.tournaments.include?(tournament)
+  end
+
 end
