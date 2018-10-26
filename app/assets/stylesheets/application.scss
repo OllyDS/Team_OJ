@@ -38,6 +38,10 @@ a.btn.btn-lg.btn-primary, input.btn.btn-lg.btn-primary.btn-block {
   border: none;
 }
 
+a {
+  color: darkorange;
+}
+
  #log-sign-forms {
    padding-top: 5em;
    width: 20em;
@@ -87,8 +91,8 @@ footer.blockquote-footer {
 }
 
 .lol-image-overlay {
-  height: 40%;
-  width: 40%;
+  height: 36%;
+  width: 36%;
 }
 
 .sc-image-overlay {
@@ -119,6 +123,12 @@ footer.blockquote-footer {
   background: #81d281;
 }
 
+//========================== HOME - Carousel Area
+
+img.sc-image-overlay:hover, img.lol-image-overlay:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
 
 //========================== HOME - Upcoming Area
 
@@ -131,6 +141,7 @@ footer.blockquote-footer {
 .home-blockquote {
   margin: 1em;
   font-size: 0.4em;
+  padding-top: 15em;
 }
 
 h1.display-4.coming-up-title {
