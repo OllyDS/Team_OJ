@@ -9,16 +9,16 @@
 
 <%= form_for @user do |f| %>
 <p>Edit Username:
-  <%= f.text_field :username %>
+  <%= f.text_field :username, autofocus: true, :class => "form-control", :placeholder => "User Name" %>
 </p>
 <p>Edit First Name:
-  <%= f.text_field :first_name %>
+  <%= f.text_field :first_name, autofocus: true, :class => "form-control", :placeholder => "First Name" %>
 </p>
 <p>Edit Last Name:
-  <%= f.text_field :last_name %>
+  <%= f.text_field :last_name, autofocus: true, :class => "form-control", :placeholder => "Surname" %>
 </p>
 <p>Edit Email:
-  <%= f.text_field :email %>
+  <%= f.text_field :email, autofocus: true, :class => "form-control", :placeholder => "Email Address" %>
 </p>
 <p>Edit games you are currently interested in:
 <%= f.collection_check_boxes :game_ids, Game.all, :id, :name %>

@@ -1,19 +1,59 @@
-<h1 class="text-center display-4"> <%= @user.username %> </h1>
+
+<h1 class="text-center display-4">
+  <%= @user.username %>
+</h1>
 <br>
-<p>Name: <%= @user.full_name %></p>
-<p>Email: <%= @user.email %></p>
-<p>Games Interested In:</p>
-<ul>
-  <% @user.games.map do |game|  %>
-  <li> <%= link_to game.name, game_path(game) %> </li>
-  <% end %>
-</ul>
-<p>Tournaments Entered:</p>
-<ul>
-  <% @user.tournaments.map do |tournament|  %>
-  <li> <%= link_to tournament.name, tournament_path(tournament) %> </li>
-  <% end %>
-</ul>
+<br>
+
+<!-- ================== ROW LEFT -->
+<div class="row">
+  <div class="col">
+    <h6>Tournaments Entered:</h6>
+    <ul>
+      <% @user.tournaments.map do |tournament|  %>
+      <li>
+        <%= link_to tournament.date + " - " + tournament.name, tournament_path(tournament) %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
+<!-- ================== ROW CENTER -->
+<div class="col">
+  <h6>Games Interested In:</h6>
+  <ul>
+    <% @user.games.map do |game|  %>
+    <li>
+      <%= link_to game.name, game_path(game) %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+<!-- ================== ROW RIGHT -->
+<div class="col">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Details</h5>
+      <p class="card-text">
+
+        <p>Name:
+          <%= @user.full_name %>
+        </p>
+        <p>Email:
+          <%= @user.email %>
+        </p>
+        <% if current_user.id == @user.id %>
+        <a href="<%= "/users/#{current_user.id}/edit" %>"class="btn btn-primary">Edit Profile</a>
+        <% end %>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
 <br>
 <div id="user-bio">
   <h4>Bio:</h4>
