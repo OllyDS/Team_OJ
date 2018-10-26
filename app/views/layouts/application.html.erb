@@ -22,8 +22,8 @@
         <![endif]-->
     </head>
     <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/"><i class="fas fa-heart"></i>// flatiron friday</a>
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><i class="fas fa-heart"></i>// flatiron friday fragfest</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -101,13 +101,19 @@
       </nav>
 
       <%# ----- Flash Errors for BCRYPT ----- %>
-    	<% if notice %>
+  <div class="text-center errors-notices">
+    <div class="flash-notice">
+      <% if notice %>
         <%= notice %>
-    	<% end %>
+      <% end %>
+    </div>
 
+      <div class="flash-alert">
     	<% if alert %>
         <%= alert %>
     	<% end %>
+    </div>
+  </div>
 
       <% if current_page?(:controller => 'pages', :action => 'home') %>
         <%= yield %>
@@ -122,7 +128,8 @@
       <footer class="footer fixed-bottom">
         <nav class="footer-bar text-right">
           <p class = "footer-squezeed">hand-squeezed by:
-          <a class="footer-brand" href="#"> <i class="fas fa-beer"></i>  team orangejuice</a></p>
+          <a class="footer-brand" href="/about"> team orangejuice </a><img class="footer-logo" src="/images/logos/team-orangejuice-logo.png" alt=""></p>
+
           <!-- <ul class="nav navbar-nav float-right">
             <li>test</li>
           </ul> -->

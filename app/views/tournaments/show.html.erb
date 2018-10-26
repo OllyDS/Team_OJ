@@ -1,39 +1,67 @@
-<h1 class = "text-center display-4"> <%= @tournament.name %> </h1>
 <% if logged_in? %>
+<div class="jumbotron tournament-show">
+  <h1 class=""><%= @tournament.name %></h1>
+  <h4 class=""><%= @tournament.date %></h4>
+  <p></p>
+</div>
 
-  <p>Current Tournaments: <%= @tournament.name %> </p>
-  <p>Date of Tournament: <%= @tournament.date %> </p>
-
-  <p>There are currently <%= @tournament.users.count %> players signed up for this tournament. </p>
-  <ul>
-    <% @tournament.users.each do |user| %>
-    <li>
-      <%= link_to user.username, user_path(user) %>
-    </li>
-    <% end %>
-  </ul>
-
-  <% if current_user.is_signed_up_to_tournament(@tournament) %>
-    <p>
-      You have already signed up for the
-      <%= @tournament.name %>
-      match on
-      <%= @tournament.date %>
-    </p>
-  <% else %>
-    <p>
-      <%= form_for UserTournament.new do |f| %>
-        <%= f.hidden_field :user_id, value: current_user.id %>
-        <%= f.hidden_field :tournament_id, value: @tournament.id %>
-        <%= f.submit 'Register' %>
-    </p>
+<div class="row">
+  <div class="col-8">  <p>There are currently <%= @tournament.users.count %> players signed up for this tournament. </p>
+    <ul>
+      <% @tournament.users.each do |user| %>
+      <li>
+        <%= link_to user.username, user_path(user) %>
+      </li>
       <% end %>
-  <% end %>
+    </ul>
+  </div>
 
-<% else %>
-<p>You are not currently logged in and don't have access to this page.</p>
-<p>To see more details about this tournament, please
-  <%= link_to "Login",login_path %> or
-  <%= link_to "Sign Up", new_user_path %>.
-</p>
-<% end %>
+
+
+
+  <div class="col-4 signed-up-or-register">
+    <div class="card h-100">
+      <div class="card-body">
+        <h4 class="card-title text-center">
+
+
+          <% if current_user.is_signed_up_to_tournament(@tournament)%>
+          Enlisted
+          <% else %>
+          Register Your Place
+          <% end %>
+
+        </h4>
+        <p class="card-text">     <% if current_user.is_signed_up_to_tournament(@tournament) %>
+              <p>
+                You have already signed up for the
+                <%= @tournament.name %>
+                match on
+                <%= @tournament.date %>.
+              </p>
+            <% else %>
+              <p>
+                <%= form_for UserTournament.new do |f| %>
+                  <%= f.hidden_field :user_id, value: current_user.id %>
+                  <%= f.hidden_field :tournament_id, value: @tournament.id %>
+                </p>
+                  <div class="text-center">
+
+                  <%= f.submit 'Register' %>
+                </div>
+                <% end %>
+            <% end %>
+
+          <% else %>
+          <p>You are not currently logged in and don't have access to this page.</p>
+          <p>To see more details about this tournament, please
+            <%= link_to "Login",login_path %> or
+            <%= link_to "Sign Up", new_user_path %>.
+          </p>
+          <% end %></p>
+      </div>
+    </div>
+
+
+</div>
+</div>
