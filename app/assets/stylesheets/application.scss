@@ -26,7 +26,16 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
 
 body {
-  padding-bottom: 4em;
+  padding-bottom: 6em;
+}
+
+.playfair-font {
+  font-family: 'Playfair Display SC', serif;
+}
+
+a.btn.btn-lg.btn-primary, input.btn.btn-lg.btn-primary.btn-block {
+  background-color: darkorange;
+  border: none;
 }
 
  #log-sign-forms {
@@ -38,7 +47,13 @@ body {
    margin-right: auto;
  }
 
+footer.blockquote-footer {
+  color: white;
+}
 
+.jumbotron.jumbotron-fluid.home-signup {
+  border-radius: 25px;
+}
 
 .fa-heart {
   color: red;
@@ -72,8 +87,8 @@ body {
 }
 
 .lol-image-overlay {
-  height: 15%;
-  width: 15%;
+  height: 40%;
+  width: 40%;
 }
 
 .sc-image-overlay {
@@ -114,7 +129,8 @@ body {
 }
 
 .home-blockquote {
-  margin: 2em;
+  margin: 1em;
+  font-size: 0.4em;
 }
 
 h1.display-4.coming-up-title {
@@ -175,8 +191,8 @@ font-family: 'Josefin Slab', serif;
 // ================== Footer
 
 img.footer-logo {
-  width: 5%;
-  height: 5%;
+  width: 50px;
+  height: 50px;
 }
 
 .footer-brand {
