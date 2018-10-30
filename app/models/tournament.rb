@@ -3,7 +3,7 @@ class Tournament < ApplicationRecord
   has_many :user_tournaments
   has_many :users, through: :user_tournaments
 
-
+  delegate :name, to: :game, prefix: true
 
   # def t_name_and_date
   #   self.name + " " + self.date
