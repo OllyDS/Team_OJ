@@ -87,7 +87,8 @@
               </p>
             </ul>
           </div>
-          <div class="card-footer"></div>
+          <div class="card-footer">
+          </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
@@ -104,7 +105,14 @@
               </p>
             </ul>
           </div>
-          <div class="card-footer"></div>
+          <div class="card-footer">
+
+
+            <p>test</p>
+            <%= tournament_array.first.date %>
+
+            
+          </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
@@ -121,12 +129,19 @@
               </p>
             </ul>
           </div>
-          <div class="card-footer"></div>
+          <div class="card-footer">
+
+
+
+          </div>
         </div>
       </div>
     </div>
   </div>
 
+<% if logged_in? == true %>
+
+  <% else %>
   <div class="jumbotron jumbotron-fluid home-signup">
     <div class="container">
       <h1 class="display-4 playfair-font text-center">Sign Up</h1>
@@ -137,6 +152,7 @@
       </div>
     </div>
   </div>
+  <% end %>
 
 
   <!-- /.row -->
@@ -182,7 +198,7 @@
       <p>Barker's rise to the top of Flatiron School's League of Legend's leaderboard has shown him to take no prisoners and no mercy to those that get in his way...</p>
     </div>
     <div class="col">
-      <img class="img-fluid rounded" src="http://i66.tinypic.com/2mdkzgp.jpg" alt="">
+      <img class="img-fluid rounded" src="/images/interview/ryan-barker.jpg" alt="">
     </div>
   </div>
 
@@ -218,10 +234,7 @@
 
   </div>
    <div class="col-sm">
-     <h5>Breaking News:</h5>
-       <p>Leading Scientists find cure for poor gaming performance.</p>
-       <p>Could a diet of pizza, onion rings and mountain dew actually add years on to your life? Doctors say !yes.</p>
-       <p>Are you spending too much time on the internet? According to psychologists, the fact you are reading this section of our website suggests you in fact do!</p>
+     <h5>Lorem ipsum dolor sit</h5>
    </div>
    <div class="col-sm">
      <a class="twitter-timeline" data-width="300" data-height="400" href="https://twitter.com/FlatironSchool?ref_src=twsrc%5Etfw">Tweets by FlatironSchool</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
