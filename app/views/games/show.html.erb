@@ -27,7 +27,7 @@
 <% if logged_in? %>
   <h5>Players Interested In <%= @game.name %>: </h5>
   <ul>
-    <% @foo.users.each do |user| %>
+    <% @users.each do |user| %>
     <li><%= link_to user.full_name, user_path(user) %></li>
     <% end %>
   </ul>

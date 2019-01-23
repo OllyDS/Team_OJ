@@ -6,10 +6,10 @@ class GamesController < ApplicationController
   end
 
   def show
-    # @users = User.all
-      @foo = Game
-        .find(params[:id])
-        .includes(user_games: :users).all
+    @users = User.all
+      # @foo = Game
+      #   .find(params[:id])
+      #   .includes(user_games: :users).all
   end
 
   def new
